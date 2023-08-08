@@ -45,7 +45,7 @@
     width: 300px;
     padding: 10px;
     cursor: pointer;
-    background-color: #53c28b;
+    background-color: var(--main-color);
     border: none;
     border-radius: 5px;
     color: #eee;
