@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./page.module.css";
 import Button from "@/components/button/Button";
-export const dynamic = 'force-dynamic'
 import { seoSeparator, seoTitle } from "@/utils/constants";
 
 export const metadata = {
