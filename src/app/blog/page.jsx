@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+export const dynamic = 'force-dynamic'
 import { seoSeparator, seoTitle } from "@/utils/constants";
 
 export const metadata = {
