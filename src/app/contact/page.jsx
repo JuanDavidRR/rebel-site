@@ -25,7 +25,7 @@ const Contact = () => {
           ></iframe>
         </div>
 
-        <form className={styles.form} action="#" method="post">
+        <form className={styles.form} action="/" method="post">
           <div className={styles.formItem}>
             <label htmlFor="name">Full Name</label>
             <input
@@ -60,7 +60,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <div>
-            <Button url="#" content="Submit" />
+            <Button url="/" content="Submit" />
           </div>
         </form>
       </div>
