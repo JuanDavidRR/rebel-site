@@ -1,0 +1,101 @@
+
+.title {
+  font-size: 50px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.imgContainer {
+  flex: 1;
+  height: 500px;
+  position: relative;
+}
+.image {
+  object-fit: contain;
+  animation: move 2s linear infinite alternate;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input,
+.textArea {
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #bbb;
+  border: 3px solid #bbb;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.loading {
+  animation: loading 1s linear infinite alternate;
+  background-color: grey;
+}
+
+.loadingPost{
+  height: 75px;
+}
+
+.loadingContainer {
+  height: 300px;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+.loadingText{
+  width: 100px;
+  height: 5px;
+  margin: 10px 0;
+}
+
+
+@keyframes move {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(-15px);
+    transform: scale(1.07);
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    display: block;
+  }
+  .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .form {
+    margin-bottom: 50px;
+  }
+  
+}

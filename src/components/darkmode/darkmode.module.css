@@ -1,0 +1,36 @@
+.container{
+    width: 48px;
+    height: 24px;
+    border: 1.5px solid var(--main-color);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .icon{
+    font-size: 12px;
+    align-self: end;
+  }
+  
+  .ball{
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.4s;
+  }
+
+  .darkToogle{
+    left: 2px;
+  }
+
+  
+  .lightToogle{
+    left: 2px;
+  }

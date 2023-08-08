@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  gap: 100px;
+}
+
+.title {
+  text-align: center;
+}
+.content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.imgContainer {
+  flex: 1;
+  position: relative;
+}
+.image {
+  object-fit: cover;
+}
+.posts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+.post {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+.actions span {
+  display: inline-block;
+  padding: 5px 5px 1px;
+  align-self: self-end;
+  border-radius: 5px;
+  color: white !important;
+  font-size: 20px;
+}
+.actions span:first-child {
+  background-color: rgb(255, 66, 66);
+}
+.actions span:nth-child(2) {
+  background-color: rgb(72, 162, 72);
+  color: white;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input,
+.textArea {
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #bbb;
+  border: 1px solid #bbb;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input:focus,
+.input:focus {
+  outline: 1px solid var(--main-color);
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.button {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  color: white;
+  width: max-content;
+  transition: 0.4s;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.loading {
+  animation: loading 1s linear infinite alternate;
+  background-color: grey;
+}
+
+.loadingPost{
+  height: 75px;
+}
+
+.loadingContainer {
+  height: 300px;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+.loadingText{
+  width: 100px;
+  height: 5px;
+  margin: 10px 0;
+}
+
+
+@keyframes move {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(-15px);
+    transform: scale(1.07);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    margin-top: 25px;
+  }
+
+  .form {
+    margin-bottom: 30px;
+  }
+}
