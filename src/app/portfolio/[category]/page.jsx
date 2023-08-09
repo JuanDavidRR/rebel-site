@@ -37,7 +37,6 @@ const Category = ({ params }) => {
             <p className={styles.description}>
               {item.desc}
             </p>
-            <Button url="/" content="Learn more" />
           </section>
           <section className={styles.imgContainer}>
             <Image

@@ -1,10 +1,10 @@
-export const dynamic = 'force-dynamic'
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { seoSeparator, seoTitle } from "@/utils/constants";
 import styles from "./page.module.css";
+export const dynamic = 'force-dynamic'
+
 
 export const metadata = {
   title: 'Blog' + seoSeparator + seoTitle,
