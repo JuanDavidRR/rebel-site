@@ -1,10 +1,10 @@
+export const dynamic = 'force-dynamic'
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { seoSeparator, seoTitle } from "@/utils/constants";
 import styles from "./page.module.css";
-export const dynamic = 'force-dynamic'
-
 
 export const metadata = {
   title: 'Blog' + seoSeparator + seoTitle,
@@ -33,14 +33,14 @@ const Blog = async () => {
   return (
     <main className={styles.container}>
       <h1>BLOG | POSTS</h1>
-      <div className={styles.mainContainer}>
+      <section className={styles.mainContainer}>
         {data.map((item) => (
           <Link
             href={`/blog/${item._id}`}
             className={styles.items}
             key={item.id}
           >
-            <div className={styles.imageContainer}>
+            <section className={styles.imageContainer}>
               <Image
                 src={item.img}
                 alt=""
@@ -48,19 +48,19 @@ const Blog = async () => {
                 height={250}
                 className={styles.image}
               />
-            </div>
-            <div className={styles.content}>
+            </section>
+            <section className={styles.content}>
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.desc}>{item.desc}</p>
-              <div className={styles.secondary}>
+              <section className={styles.secondary}>
                 <p className={styles.desc}>{item.username}</p>
                 <p className={styles.desc}>{formatDate(item.createdAt)}</p>
-              </div>
+              </section>
               <div className={styles.hover}></div>
-            </div>
+            </section>
           </Link>
         ))}
-      </div>
+      </section>
     </main>
   );
 };
