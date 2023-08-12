@@ -10,7 +10,7 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 })
- 
+
 const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-poppins',
@@ -29,8 +29,8 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <AuthProvider>
+            <Navbar />
             <div className="container">
-              <Navbar />
               {children}
               <Footer />
             </div>

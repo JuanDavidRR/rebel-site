@@ -3,7 +3,7 @@ import styles from './page.module.css'
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <div className={styles.container}>
         <h2 className={styles.mainTitle}>Our Work</h2>
         {children}
     </div>

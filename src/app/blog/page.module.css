@@ -1,3 +1,6 @@
+.container{
+  padding: 8rem 30px 0;
+}
 .mainContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -5,7 +8,7 @@
   margin: 40px 0;
 }
 
-.container {
+.items {
   align-items: center;
   border: 1px solid gray;
   border-radius: 10px;
@@ -14,13 +17,13 @@
 }
 .image {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: fill;
   border-radius: 10px 10px 0px 0px;
   transition: 0.4s;
 }
 
-.container:hover .image {
+.items:hover .image {
   filter: grayscale(1);
 }
 
@@ -52,7 +55,7 @@
   transition: 0.5s;
 }
 
-.container:hover .hover {
+.items:hover .hover {
   background-color: var(--main-color);
 }
 
@@ -89,12 +92,11 @@
   .mainContainer {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 20px;
   }
   .container {
     flex-direction: column;
     gap: 0px;
-    border: 1px solid gray;
     border-radius: 10px;
   }
 }

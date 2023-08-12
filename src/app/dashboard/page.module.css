@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 100px;
+  padding: 7rem 30px 2rem;
 }
 
 .title {

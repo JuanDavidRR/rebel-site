@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 import styles from "./navbar.module.css";
 import { usePathname } from "next/navigation";
 import Darkmode from "../darkmode/Darkmode";
 import { signOut, useSession } from "next-auth/react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const links = [
   {
@@ -44,19 +45,27 @@ const Navbar = () => {
   const pathname = usePathname();
   const session = useSession();
 
+  const [active, setActive] = useState(false);
+  const handleClick = () => {
+    setActive(!active);
+  };
+
   return (
     <nav className={styles.container}>
       <Link className={styles.logo} href="/">
         Rebel Blog
       </Link>
-      <ul className={styles.links}>
-        <li>
+      <ul
+        className={active ? styles.links + " " + styles.activeM : styles.links}
+      >
+        <li onClick={handleClick}>
           <Darkmode />
         </li>
         {links.map((link) => {
           return (
             <li key={link.id}>
               <Link
+              onClick={handleClick}
                 href={link.url}
                 className={pathname === link.url ? styles.active : styles.link}
               >
@@ -73,6 +82,13 @@ const Navbar = () => {
           )}
         </li>
       </ul>
+      <div onClick={handleClick} className={styles.hamburger}>
+        {active ? (
+          <AiOutlineClose className="icon" />
+        ) : (
+          <AiOutlineMenu className="icon" />
+        )}
+      </div>
     </nav>
   );
 };

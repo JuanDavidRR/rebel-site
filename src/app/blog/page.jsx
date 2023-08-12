@@ -31,13 +31,13 @@ const formatDate = (dateString) => {
 const Blog = async () => {
   const data = await getData();
   return (
-    <main>
+    <main className={styles.container}>
       <h1>BLOG | POSTS</h1>
       <div className={styles.mainContainer}>
         {data.map((item) => (
           <Link
             href={`/blog/${item._id}`}
-            className={styles.container}
+            className={styles.items}
             key={item.id}
           >
             <div className={styles.imageContainer}>

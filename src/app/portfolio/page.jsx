@@ -10,7 +10,7 @@ export const metadata = {
 
 const Portfolio = () => {
   return (
-    <div className={styles.container}>
+    <section>
       <h1 className={styles.selectTitle}>Check our Portfolios</h1>
       <div className={styles.items}>
         <Link href="/portfolio/illustrations" className={styles.item}>
@@ -26,7 +26,7 @@ const Portfolio = () => {
           <div className={styles.hover}></div>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

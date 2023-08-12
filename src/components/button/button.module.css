@@ -15,7 +15,7 @@
     color: var(--main-color);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .button{
       margin: 0 auto;
     }
